@@ -26,6 +26,7 @@ header p{
     color:#FFFFFF;
     margin-right:3%;
 }
+/*project effects*/
 .project {
     max-width: 300px;
     max-height: 300px;
@@ -46,7 +47,6 @@ header p{
     top:30%;
     opacity: 0;
 }
-
 .project:hover :not(a img){
      text-align: center;
      width:100%;
@@ -103,6 +103,7 @@ header p{
     bottom: 8px;
     right: 16px;
 }
+/*projects*/
 #three.project{
     position: absolute;
     right: 1000px;
@@ -120,7 +121,19 @@ header p{
     right: 200px;
     top:10%;
 }
-
+#portinfo {
+    height:200px;
+    width: 30%;
+    background-color:#000000;
+    color:white;
+    text-size:14px;
+    border-radius:10px;
+    position:absolute;
+    text-align:center;
+    left: 2%;
+    top:20%;
+    box-shadow: 3px 3px 5px 1px #a0a0a0;}
+/*navigation stuff*/
 nav{
     background: #000000;
     padding: 0;
