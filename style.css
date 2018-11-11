@@ -13,7 +13,17 @@ a{
     text-decoration: none;
 }
 header{
-    <p>
+    background:#000000;
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+    height:100px;
+    width: auto;
+}
+header p{
+    text-align: center;
+    color:#FFFFFF;
 }
 .project {
     max-width: 300px;
@@ -28,7 +38,7 @@ header{
 .project:hover img{
     filter:blur(2px) brightness(80%);
 }
-.project :not(img){
+.project :not(a img){
     text-align: center;
     width:100%;
     z-index:-1;
@@ -36,7 +46,21 @@ header{
     opacity: 0;
 }
 
-.project:hover :not(img){
+.project:hover :not(a img){
+     text-align: center;
+     width:100%;
+     z-index:-1;
+     top:30%;
+     opacity:1;
+ }
+.project h1{
+    text-align: center;
+    width:100%;
+    z-index:-1;
+    top:30%;
+    opacity:0;
+}
+.project:hover h1{
     text-align: center;
     width:100%;
     z-index:-1;
@@ -44,6 +68,7 @@ header{
     opacity:1;
 }
 .centered {
+    text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -96,20 +121,21 @@ header{
 }
 
 nav{
-    background: #FFFDEB;
+    background: #000000;
     padding: 0;
     margin: 0;
     border-radius:10px;
 }
 
 nav ul{
+    background:#000000;
     list-style :none;
     margin-left:7%;
     padding : 0;
 
 }
 nav li a {
-    color : #000000;
+    color : #FFFFFF;
     display: block;
     float: left;
     padding: 20px;
@@ -117,7 +143,7 @@ nav li a {
 }
 
 nav a:hover, nav li.active a{
-    background: #9BFBDD;
+    background: #000000;
     color: #FFFFFF;
 
 }
