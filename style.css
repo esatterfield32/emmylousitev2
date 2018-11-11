@@ -1,0 +1,123 @@
+body{
+    background-image: linear-gradient(30deg,#9a9a8e, #f5f0e4 );
+    font-family: "courier",Arial;
+
+}
+nav ul{
+    list-style: none;
+}
+ul a{
+    color:black;
+}
+a{
+    text-decoration: none;
+}
+header{
+    <p>
+}
+.project {
+    max-width: 300px;
+    max-height: 300px;
+    display: inline-block;
+
+}
+.project img{
+    width:150%;
+    height: auto;
+}
+.project:hover img{
+    filter:blur(2px) brightness(80%);
+}
+.project :not(img){
+    text-align: center;
+    width:100%;
+    z-index:-1;
+    top:30%;
+    opacity: 0;
+}
+
+.project:hover :not(img){
+    text-align: center;
+    width:100%;
+    z-index:-1;
+    top:30%;
+    opacity:1;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Bottom left text */
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+/* Top left text */
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+/* Top right text */
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+#three.project{
+    position: absolute;
+    right: 1200px;
+    bottom: 200px;
+}
+
+#two.project{
+    position: absolute;
+    right: 700px;
+    bottom: 375px;
+}
+
+#one.project{
+    position: absolute;
+    right: 250px;
+    bottom: 500px;
+}
+
+nav{
+    background: #FFFDEB;
+    padding: 0;
+    margin: 0;
+    border-radius:10px;
+}
+
+nav ul{
+    list-style :none;
+    margin-left:7%;
+    padding : 0;
+
+}
+nav li a {
+    color : #000000;
+    display: block;
+    float: left;
+    padding: 20px;
+    text-decoration : none;
+}
+
+nav a:hover, nav li.active a{
+    background: #9BFBDD;
+    color: #FFFFFF;
+
+}
