@@ -1,7 +1,7 @@
 body{
     background-image: linear-gradient(30deg,#9a9a8e, #f5f0e4 );
     font-family: 'Rubik', sans-serif;;
-    text-shadow: 1px 1px 1px #aaa;
+
 }
 a{
     text-decoration: none;
@@ -16,8 +16,6 @@ header{
     margin: 0;
     padding: 5px;
     border-radius: 5px;
-    border: thick;
-    border-color: #ffffff;
     position: relative;
 }
 header p{
@@ -25,6 +23,20 @@ header p{
     text-align: right;
     color:#FFFFFF;
     margin-right:3%;
+}
+footer{
+    margin: 0;
+    width: auto%;
+    background: #000;
+    padding: 5px;
+    border-radius: 5px;
+    height:50px;
+}
+footer p{
+    color:white;
+    text-align:right;
+    margin-right:2%;
+    text-shadow: 1px 1px 1px #aaa;
 }
 /*project effects*/
 .project {
@@ -48,7 +60,7 @@ header p{
     opacity: 0;
 }
 .project:hover :not(a img){
-     text-align: center;
+    text-align: center;
      width:100%;
      z-index:-1;
      top:30%;
@@ -62,6 +74,7 @@ header p{
     opacity:0;
 }
 .project:hover h1{
+    text-shadow: 1px 1px 1px #aaa;
     text-align: center;
     width:100%;
     z-index:-1;
@@ -104,6 +117,11 @@ header p{
     right: 16px;
 }
 /*projects*/
+#four.project{
+    position: absolute;
+    left:0px;
+    top: 15%;
+}
 #three.project{
     position: absolute;
     right: 1000px;
@@ -127,6 +145,7 @@ header p{
     background-color:#000000;
     color:white;
     text-size:14px;
+    text-shadow: 1px 1px 1px #aaa;
     border-radius:10px;
     position:absolute;
     text-align:center;
@@ -156,10 +175,26 @@ nav li a {
     float: left;
     padding: 20px;
     text-decoration : none;
+    text-shadow: 1px 1px 1px #aaa;
 }
 
 nav a:hover, nav li.active a{
     color: #FFFFFF;
+    text-shadow: 1px 1px 1px #aaa;
     background-color: #3a3a3a;
+
+}
+#aside{
+    height:75%;
+    width:30%;
+    border-radius:10px;
+    background-color:#000;
+    position: absolute;
+    right:5%;
+    top:20%;
+    box-shadow: 3px 3px 5px 1px #a0a0a0;
+}
+#wrapper{
+    height:610px;
 
 }
