@@ -26,7 +26,7 @@ header p{
 }
 footer{
     margin: 0;
-    width: auto%;
+    width: auto;
     background: #000;
     padding: 5px;
     border-radius: 5px;
@@ -195,6 +195,99 @@ nav a:hover, nav li.active a{
     box-shadow: 3px 3px 5px 1px #a0a0a0;
 }
 #wrapper{
-    height:610px;
+    min-height:610px;
+
+
+}
+
+.left-col{
+    height: auto;
+    width: 45%;
+    margin-top:2%;
+    margin-left: 5%;
+    background-color: #000;
+    padding: 2%;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 1px #a0a0a0;
+}
+
+input[type=submit] {
+    background-color: #fff;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #a0a0a0;
+}
+
+input[type=text], select, textarea {
+    width: 95%;
+    padding: 7px;
+    border: 1px solid #fff29c;
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 2px; /* Add a top margin */
+    margin-bottom: 10px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.sidebar{
+    float: right;
+    height: auto;
+    width: 25%;
+    border-radius: 10px;
+    margin-right: 5%;
+    padding: 2%;
+    box-shadow: 3px 3px 5px 1px #a0a0a0;
+    border-color: #aaa;
+    border-style: ridge;
+}
+
+#card{
+    max-width: 100%;
+    border-radius: 10px;
+    background:#FFFFFF;
+    margin-top: 2%;
+    padding: 2%;
+    margin-bottom: 2%; 
+}
+#card-wrapper{
+    margin-left:15%;
+    max-width: 980px;
+    border-radius: 10px;
+    background:#000;
+    margin-top: 2%;
+    padding: 2%;
+    margin-bottom: 2%;
+}
+img{
+    max-width:500px;
+}
+h6,h4,h5,h3{
+    color:white;
+    text-align:center;
+}
+
+#mediabar{
+    padding:5px;
+    background-color: black;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    float: right;
+    margin-right: 10px;
+    text-align:left;
+    }
+#mediabar ul{
+    line-height: 1.5em;
+    padding-right:15px;
 
 }

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio - Arduino Calculator</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+</head>
+<body>
+<header>
+    <p style = "color:black">yo</p>
+    <nav>
+        <ul>
+            <li><a href = "http://www.emmylousatterfield.online/index.html">HOME</a></li>
+            <li><a href = "http://www.emmylousatterfield.online/contact.html">CONTACT ME</a></li>
+            <li class ='active'><a href = "http://www.emmylousatterfield.online/portfolio.html">PORTFOLIO</a></li>
+            <li ><a href = "http://www.emmylousatterfield.online/blog">BLOG</a></li>
+            <li><a href = "Emily Satterfield's Resume.pdf" target = "_blank">RESUME</a></li>
+        </ul>
+    </nav>
+    <div class = "clear"></div>
+</header>
+<div id="wrapper">
+    <div id="mediabar">
+        <ul style="font-size:20px; list-style: none">
+            <li>GitHub</li>
+            <li><a HREF="#Summary" style = "color:white">Summary</a></li>
+            <li><a HREF="#Goals" style = "color:white">Goals</a></li>
+            <li><a HREF="#Hardware" style = "color:white">Hardware</li>
+            <li><a HREF="#Code" style = "color:white">Code</li>
+            <li><a HREF="#Lessons" style = "color:white">Lessons Learned</li>
+            <li><a HREF="#Media" style = "color:white">Media</li>
+        </ul>
+    </div>
+    <div id= "card-wrapper">
+        <h4 style = "text-align: center; font-size: 24pt;">Arduino Calculator</h4>
+    <h3>Summer 2016</h3>
+        <div id ="card">
+            <p style="text-align:center;"> <img src = "C:\Users\esatt\WebstormProjects\emmylousite\doggos.PNG"/> </p>
+            <h2><b><a NAME="Summary"/>Summary</b></h2>
+            <p>As a part of ESP Junction, I built a functional calculator using an Arduino Uno, a keypad, a button, a tupperware container,
+                and an LCD display. The purpose of this project was to investigate how calculators do math and to recreate those functions myself.
+                My calculator can calculator can do the basic four functions as well as calculate trigonometric functions, exponents, logarithms, and roots.
+            </p>
+            <h2><b><a NAME="Goals"/>Goals</b></h2>
+            <h2><b><a NAME="Hardware"/>Hardware</b></h2>
+            <p>Button matrices are able to do reduce the number of pins used by using a grid system. All the rows would be an input
+                and the columns would be outputs (or vice versa). The outputs from the rows would send a signal that, when a button is
+                pressed, would be read by the columns. The inputs scan the outputs row by row (or column by column) to determine which
+                button was pressed. This essentially gives the processor a coordinate for the button that was pushed, which allows it to
+                decode the button.</p>
+            <p>The push button switch was used as a shift key. Whenever the key was decoded, the shift key’s position was taken into consideration.
+                If it is pressed, that information, maps the key to a different value than if it is left unpressed.</p>
+
+            <p>The LCD display is connected to an SPI unit backpack, which is a small processing chip that takes care of the job of some of the pins
+                on the LCD, onboard. The SPI unit, therefore, decreases the amount of pins being used by the LCD on the Arduino to four, which was
+                essential in order for there to be room for a shift key. The LCD with the SPI backpack uses a special library in the Arduino program.</p>
+
+            <p>The Arduino UNO is a prototyping processing board that can be programmed in the Arduino language, a language very similar to C++.
+                My calculator used several digital input/ output pins, both for the button matrix and the shift key, and some analog pins for the LCD.
+                The Arduino was powered by a 9V battery that is connected to a single pole double throw switch, so it can be turned on and off. The Arduino
+                uses several libraries that make using the hardware easier in software.</p>
+
+            </p>
+            <h2><b><a NAME="Code"/>Code</b></h2>
+            <p style="text-align:center;"><img src = "codesnippet.png"/></p>
+            <p>State Machines
+                Calculators are simply state machines, or machines that start in a state and move to new states based on certain events.
+                The state machine I used for my calculator has four states. The first state called “get_first_operand” is the state the calculator
+                begins in. In this state it looks for the push of a button on the keypad. If the calculator receives a string of numbers, it turns
+                that string into a full number. This state also looks for a negative sign or a decimal point. Once it has received an operator,
+                it knows that it has received the full operand, so it saves that operand and the operator and moves into the next state called get_second_operand.
+                In this state it looks for another string of numbers which it converts into a full operand. It leaves this state and moves to the next state:
+                get_result, once it has received a full operand and the “=” key. The get_result state uses the operator, which it decodes depending on the use
+                of a shift, and performs that operation with the two operands. It does all the functions in a subroutine that returns the result to the loop.
+                The result can then be operated on if the next input is an operator, causing it to move to the get_second_operand state, or it can be cleared and
+                the state is becomes get_first_operand, and everything resets. The final state, get_equals, is used in the case that the operator is a logarithm
+                because there wouldn’t be a second operand to look for. Whenever a the clear key is pressed, everything is pressed and it moves back to the first
+                state and looks for an operand again.
+            </p>
+            <h2><b><a NAME="Lessons"/>Lessons Learned</b></h2>
+            <p>This setup was used for simplicity and because the Arduino language is fairly intuitive and easy for beginners to write in. However, there were
+                some limitations when using this language.</p>
+            <p>First of all, in order to receive non-integer result, a the result needs to be a float. Floats can often offer strange results as it can only
+                offer accuracy up to 6-7 digits, despite the fact that is can store 32 bits of information (as high as 3.4028235E+38 and as low as -3.4028235E+38).
+                So, for instance, if I were to input the number 33,333,333 the float would instead act as though the number was 33,333,332, which when doing calculations
+                would give inaccurate results as well. And, unlike other language platforms where you can use a double instead of a float to offer more accuracy
+                (up to 15 digits), Arduino doubles offer the same amount of accuracy for both floats and doubles.</p>
+            <p>Another limitation of the configuration is a limitation of the LCD. When using floats on the LCD, the screen always displays the number with two
+                decimal points. If the number is just “1,” the LCD will display “1.00,” if it’s “20,” it will display “20.00,” and so on. This may not seem like
+                an immediate concern, yet in it prove to be problematic in the case that more than two places right of the decimal point is used. In this case,
+                the LCD rounds the operand to the nearest hundredth on screen. For example, if the number “9.999” were used, the LCD would round the operand as
+                soon as the thousands place is used and the display would go from “9.99” to “10.00,” when instead it should go from “9.99” to “9.999.” The bits
+                the Arduino stores are not altered, but this limitation can make calculations somewhat confusing.</p>
+            <p>There are ways to combat this issue, though they are somewhat complex and would be unnecessary with another interface. One way to correct this would
+                be to display the number just as a string of digits instead of a complete operand, and to just save the operand internally. However, this could lead
+                to issues with overflow, and would make printing results far more difficult, as the results are never read by the Arduino as separate digits, but as
+                a full number. Another way to deal with this is to only allow a user to use two decimal spots and truncate the number there. This would avoid the
+                possibility of the LCD rounding all together, but would restrict the amount of precision one could do calculations with. Either way, further issues
+                persist.</p>
+            <p>Furthermore, there are limitations in the functions themselves. For example, when using the “pow()” function to raise a number to a power, the result
+                could come back inaccurate due to rounding issues. So, to fix this more round-a-bout code had to be used:</p>
+            <p>This code essentially multiplies a number by itself second operand number of times. Or is the second operand is 0, it returns a 1, as a result.
+                And because there is no Arduino function for performing a root (besides square roots), a different method had to be used as well:</p>
+            <p>The code used for the first operand state:</p>
+            <p>All the characters are used in if statements that translate them into actual functions, the characters cannot do anything on their own, and do not
+                have an innate value to the calculation, without first being parsed.Here, the first operand is raised to the power of the one divided by the second
+                operand. The “pow()” function was used because there was no other way to do accomplish this task with a fractional value. The results here have proven
+                to be reliable.</p>
+            <p>Also, it is important to note that when a button was pressed, the Arduino read it as a character. In order to actually perform functions on the number,
+                it first had to be converted into an integer. Also, the Arduino read all the digits that came in as a string of numbers at first. The digits needed to
+                be combined to a full number by multiplying the total operand by ten and adding that digit. And in the case that there was a decimal, the digits after
+                the decimal point were instead divided by ten to the power of whatever decimal place it was. Finally, if it reads that there was a ‘-’ present before
+                a number was, it changed the sign of the operand by multiplying the digits by a variable called “positive” and adding it to the total operand as before.
+                The value of “positive” switches between 1 and -1 depending on whether or not it is reads the negative sign before there are any digits present.
+                Otherwise, it reads the negative sign as subtraction, saves it as the operator and starts looking for a second operand. The process repeats itself
+                for this state.
+            </p>
+            <h2><b><a NAME="Media"/>Media</b></h2>
+        </div>
+    </div>
+</div>
+<footer>
+    <p><i>Emily Satterfield 2018</i></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+</head>
+<body>
+<header>
+    <p style = "color:black">yo</p>
+    <nav>
+        <ul>
+            <li><a href = "http://www.emmylousatterfield.online/index.html">HOME</a></li>
+            <li class ='active'><a href = "#">CONTACT ME</a></li>
+            <li><a href =  "http://www.emmylousatterfield.online/portfolio.html">PORTFOLIO</a></li>
+            <li><a href = "http://www.emmylousatterfield.online/blog.html">BLOG</a></li>
+            <li><a href = "Emily Satterfield's Resume.pdf" target = "_blank">RESUME</a></li>
+        </ul>
+    </nav>
+    <div class = "clear"></div>
+</header>
+<div id="wrapper">
+    <aside class = "sidebar">
+        <h4>About Me</h4>
+        <img src = "images/aboutme.PNG"/>
+        <p>I am a self-certified nerd and lover of dogs. I will be a freshman at MIT in the fall. When I'm not working, doing math, or having an existential crisis, I enjoy cooking, sewing, and painting. My favorite word is butyraceous. My raison d'etre is watching street performers - painters, musicians, dancers, anyone who is doing what they love no matter the cost - that is everything to me. </p>
+    </aside>
+    <section class = "left-col">
+        <div id = "contact-me">
+            <p> Hi, glad you're interested in reaching out to me! Contact me by filling out the form below! It will forward any concerns right to my email!
+            </p>
+            <form method="post" action="contact.php">
+
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Your last name..">
+
+                <label for="email">Email Address</label>
+                <input type="text" id="email" name="email" placeholder="Your email address..">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" name = "send" value="submit">
+
+            </form>
+        </div>
+    </section>
+
+    <div class ="clear"></div>
+</div>
+<footer>
+    <p><i>Emily Satterfield 2018</i></p>
+</footer>
+</body>
+</html>
