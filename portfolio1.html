@@ -43,6 +43,13 @@
                 My calculator can calculator can do the basic four functions as well as calculate trigonometric functions, exponents, logarithms, and roots.
             </p>
             <h2><b><a NAME="Goals"/>Goals</b></h2>
+            <p>
+                Calculators have been in use for hundreds of years, starting with the abacus, which was an early counting tool developed by the Chinese around 500 B.C. E.,
+                developing into the adding and subtracting machine in 1642 developed by Pascal, and finally into more sophisticated machines as time went on.
+                People use calculators everyday for a variety of purposes, for work, banking, school, and for areas of study that apply mathematics. So how
+                do calculators work? How do they take bits of information, the 1s and 0s, and turn them into the calculations as we see them? This is the question
+                I investigated as I worked on this project by building my own calculator.
+            </p>
             <h2><b><a NAME="Hardware"/>Hardware</b></h2>
             <p>Button matrices are able to do reduce the number of pins used by using a grid system. All the rows would be an input
                 and the columns would be outputs (or vice versa). The outputs from the rows would send a signal that, when a button is
@@ -117,6 +124,36 @@
                 for this state.
             </p>
             <h2><b><a NAME="Media"/>Media</b></h2>
+            <div class="row">
+            <div class="column">
+                <img src="C:\Users\esatt\WebstormProjects\emmylousite\doggos.PNG" alt="Nature" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="C:\Users\esatt\WebstormProjects\emmylousite\doggos.PNG" alt="Snow" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="C:\Users\esatt\WebstormProjects\emmylousite\doggos.PNG" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="C:\Users\esatt\WebstormProjects\emmylousite\doggos.PNG" alt="Lights" style="width:100%" onclick="myFunction(this);">
+            </div>
+        </div>
+
+            <div class="container">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="expandedImg" style ="flex-shrink: 0; min-width: 100%; min-height: 100%">
+                <div id="imgtext"></div>
+            </div>
+
+            <script>
+                function myFunction(imgs) {
+                    var expandImg = document.getElementById("expandedImg");
+                    var imgText = document.getElementById("imgtext");
+                    expandImg.src = imgs.src;
+                    imgText.innerHTML = imgs.alt;
+                    expandImg.parentElement.style.display = "block";
+                }
+            </script>
         </div>
     </div>
 </div>
