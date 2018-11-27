@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookbook</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+</head>
+<body>
+<header>
+    <p style = "color:black">yo</p>
+    <nav>
+        <ul>
+            <li><a href = "http://www.emmylousatterfield.online/index.html">HOME</a></li>
+            <li><a href = "http://www.emmylousatterfield.online/contact.html">CONTACT ME</a></li>
+            <li  class ='active'><a href = "http://www.emmylousatterfield.online/portfolio.html">PORTFOLIO</a></li>
+            <li><a href = "http://www.emmylousatterfield.online/blog">BLOG</a></li>
+            <li><a href = "Emily Satterfield's Resume.pdf" target = "_blank">RESUME</a></li>
+        </ul>
+    </nav>
+    <div class = "clear"></div>
+</header>
+<div id ="wrapper">
+    <p>yupppp</p>
+    <button class="collapsible"><p style="text-align:center"><img src = "C:\Users\esatt\Pictures\WEBSITE IMAGES\yellowcloud.png" style="width:100%; height:auto;"/></button>
+    <div class="content">
+        <p>Lorem ipsum...</p>
+    </div>
+    <div class="clear"></div>
+    <button class="collapsible"><p style="text-align:center"><img src = "C:\Users\esatt\Pictures\WEBSITE IMAGES\yellowcloud.png" style="width:100%; height:auto;"/></button>
+    <div class="content">
+        <p>Lorem ipsum...</p>
+    </div>
+    <div class="clear"></div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+
+
+
+                } else {
+                    content.style.display = "block";
+
+
+                }
+            });
+        }
+    </script>
+</div>
+<footer>
+    <p><i>Emily Satterfield 2018</i></p>
+</footer>
+</body>
+</html>
