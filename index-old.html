@@ -1,0 +1,82 @@
+<html lang = en>
+<head>
+    <meta charset= "utf-8" />
+    <title> Emmy Lou Satterfield</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+</head>
+<body>
+<header>
+    <p style ="color:black;">yuh</p>
+
+    <nav>
+        <ul>
+            <li class ='active'><a href = "#">HOME</a></li>
+            <li><a href = "http://www.emmylousatterfield.online/contact.html">CONTACT ME</a></li>
+            <li><a href = "http://www.emmylousatterfield.online/portfolio.html">PORTFOLIO</a></li>
+                        <li><a href = "http://www.emmylousatterfield.online/cookbook.html">COOKBOOK</a></li>
+            <li><a href = "http://www.emmylousatterfield.online/blog.html">BLOG</a></li>
+            <li><a href = "Emily Satterfield's Resume.pdf" target = "_blank">RESUME</a></li>
+        </ul>
+    </nav>
+    <div class = "clear"></div>
+</header>
+<div id="wrapper">
+<div id="homeimage"><img src="images\EMILYPIC5.png"  style="width:100%;height:auto;"></div>
+
+    <div class = "project" id = "four">
+        <a href="http://www.emmylousatterfield.online/portfolio.html" style = "color:black;"><img src="images\yellowcloud.png"/>
+        <div class = "cloud-centered"><h1 style = "text-align:center;">Check out my projects!</h1></div></a>
+    </div>
+
+    <div id = "aside">
+        <h2 style = "color:white; padding:5px;margin:10px;text-align:center;letter-spacing: 0.1em;">WELCOME</h2>
+        <p style = "color:white; padding:5px;margin:10px; line-height: 1.5em;">My name is Emily Satterfield and this is my personal website, handcoded with love. (and html, css, javascript, etc) I made this so I could show the world who I am. Here, you can find a blog, my portfolio, my resume, and a contact form. I have also been playing with idea of a recipe book because I love to cook, but that's still TBD. </p>
+    </div>
+    <div class = "project" id = "five">
+        <a href="http://www.emmylousatterfield.online/cookbook.html" style="color:black;"><img src="images\yellowcloud.png"/>
+        <div class = "cloud-centered"><h1 style = "text-align:center;">Here's what's cooking</h1></div></a>
+    </div>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="top-left" style = "color:white;">1 / 3</div>
+          <img src="images/homepagepic2.jpg" style="max-width:100%; border-radius:10px;">
+          <div class="top-centered" style = "color:white; text-shadow: 1px 1px #a0a0a0;">One of the FLL Jr. Teams I mentored and me!</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="top-left" style = "color:white;">2 / 3</div>
+          <img src="images/inspiration.PNG" style="max-width:100%; border-radius:10px;">
+          <div class="top-centered" style = "color:white; text-shadow: 1px 1px #a0a0a0;">Some advice given to me by a very wise little girl.</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="top-left" style = "color:white;">3 / 3</div>
+          <img src="images/homepagepic.PNG" style="max-width:100%;border-radius:10px;">
+          <div class="top-centered" style = "color:white; text-shadow: 1px 1px #a0a0a0;">Some friends and I at a robotics competition.</div>
+        </div>
+    </div>
+    
+    <script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 3000); 
+    }
+    </script>
+</div>
+<footer><p><i>Emily Satterfield 2018</i></p></footer>
+
+</body>
+
+</html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio - Automated Fan</title>
+    <title>Portfolio - Arduino Calculator</title>
     <link rel = "stylesheet" type = "text/css" href = "style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
 </head>
@@ -13,8 +13,9 @@
         <ul>
             <li><a href = "http://www.emmylousatterfield.online/index.html">HOME</a></li>
             <li><a href = "http://www.emmylousatterfield.online/contact.html">CONTACT ME</a></li>
-            <li  class ='active'><a href = "http://www.emmylousatterfield.online/portfolio.html">PORTFOLIO</a></li>
-            <li><a href = "http://www.emmylousatterfield.online/blog">BLOG</a></li>
+            <li class ='active'><a href = "http://www.emmylousatterfield.online/portfolio.html">PORTFOLIO</a></li>
+                        <li><a href = "http://www.emmylousatterfield.online/cookbook.html">COOKBOOK</a></li>
+            <li ><a href = "http://www.emmylousatterfield.online/blog.html">BLOG</a></li>
             <li><a href = "Emily Satterfield's Resume.pdf" target = "_blank">RESUME</a></li>
         </ul>
     </nav>
@@ -24,27 +25,89 @@
     <div id="mediabar">
         <ul style="font-size:20px; list-style: none">
             <li>GitHub</li>
-            <li>Summary</li>
-            <li>Goals</li>
-            <li>Hardware</li>
-            <li>Code</li>
-            <li>Lessons Learned</li>
-            <li>Media</li>
+            <li><a HREF="#Summary" style = "color:white">Summary</a></li>
+            <li><a HREF="#Goals" style = "color:white">Goals</a></li>
+            <li><a HREF="#Hardware" style = "color:white">Hardware</li>
+            <li><a HREF="#Code" style = "color:white">Code</li>
+            <li><a HREF="#Lessons" style = "color:white">Lessons Learned</li>
+            <li><a HREF="#Media" style = "color:white">Media</li>
         </ul>
     </div>
     <div id= "card-wrapper">
-        <h4 style = "text-align: center; font-size: 24pt;">Arduino Calculator</h4>
-    <h3>Summer 2016</h3>
+        <h4 style = "text-align: center; font-size: 24pt;">Persistance of Vision LED Display</h4>
+    <h3>Winter 2017</h3>
         <div id ="card">
-            <p style="text-align:center;"> <img src = "C:\Users\esatt\WebstormProjects\emmylousite\doggos.PNG"/> </p>
-            <h2><b>Summary</b></h2>
-            <p>As a part of ESP Junction, I built a functional calculator using an Arduino Uno, a keypad, a button, a tupperware container, and an LCD display. The purpose of this project was to investigate how calculators do math and to recreate those functions myself. My calculator can calculator can do the basic four functions as well as calculate trigonometric functions, exponents, logarithms, and roots.
+            <p style="text-align:center;"><video style ="height:auto; max-width:300px;" controls>
+    <source  src = 'images/portfolio/portfolio2_vid.mp4'/></p>
+            <h2><b><a NAME="Summary"/>Summary</b></h2>
+            <p>If you watched the video above, how many LEDs do think were used to create the display. The answer is not intuitive.
+            In fact, when I first saw a similar project on Youtube, I was way off. The answer: eight. How is this possible?
+            Persistence of vision. In other words, the brain can only process visual information so fast. So if you flash the LEDs
+            faster than that, you won't even be able to recognize that they're flashing. To take advantage of this, you can move them
+            while they're flashing and make cool designs. Or spell words. Your brain won't tell the difference between the moving LEDs and 
+            60 stationary ones. I thought this was really cool, and was inspired to build this project. </p>
+            <h2><b><a NAME="Goals"/>Goals</b></h2>
+            <p>This was one of my first big maker projects that I did from start to finish. Going in, my goal was to learn and make
+                something cool. I also wanted to step outside of my comfort zone and take this as an opportunity to really use
+                CAD and 3D printing for the first time.</p>
+            <h2><b><a NAME="Hardware"/>Hardware</b></h2>
+            <p>The whole display is made up of 8 LEDs soldered to a blank PCB in series with resistors and connected to the DIO pins of an Arduino
+            NANO. The NANO was also connected to a Bluetooth module through the serial port. This was used to send bits to the NANO and control what was
+            displayed. The bluetooth module could be paired to a phone and using MIT AppInventor, an app was built to send characters to the Serial Monitor.
+            An infrared sensor was used as a makeshift tachometer so the speed of the flashing could be controlled according to the speed of the motor. Originally all that was mounted
+            on a 3D printed fan-like part that fit over the motor of a window fan I butchered. For the second revision, a 6V 300rpm DC gearmotor was used instead
+            of the bulky fan. I 3D printed a stand for that little motor so it could all stand on its own. All the electronics besides the motor are powered by a 9V
+            battery that could be turned on and off with a tiny DIP switch. The motor was powered by a 6V power supply.</p>
+            <h2><b><a NAME="Code"/>Code</b></h2>
+            <p>The code for this project was written in the Arduino language. A serial monitor listened from incoming strings of letters and for each letter translated it into an array of
+            1s and 0s that turned the LEDs on and off to spell words. The speed of the fan was collected by waiting for a signal from the IR  (a little piece of foil would reflect
+            light and return a signal signifying one full rotation. The time was recorded for each rotation to get the velocity of the fan), and that controlled the delays of the flashes.</p>
+            <h2><b><a NAME="Lessons"/>Lessons Learned</b></h2>
+            <p> A lot of lessons were learned throughout this whole project. First of all, I learned a lot about doing clean circuitry. Because everything was so small and so compact,
+            all the solder joints needed to be perfect. Also everything had to be permanent so it wouldn't fall apart while spinning, which was a challenge when trying to debug. This was
+            also my first real CAD project besides a few boxes I had done in school. I had to teach myself the basics of Solidworks. Though that was difficult, I learned I am
+            sort of a CAD junkie. With that, it was also my first time 3D printing my own parts. And naturally, the pains of tolerancing parts were part of a learning experience. Trust me
+            though, when that part did fit, it was a rush! (This was before I had my own 3D printer at home, which made revisions even more challenging)</p>
             </p>
-            <h2><b>Goals</b></h2>
-            <h2><b>Hardware</b></h2>
-            <h2><b>Code</b></h2>
-            <h2><b>Lessons Learned</b></h2>
-            <h2><b>Media</b></h2>
+            <h2><b><a NAME="Media"/>Media</b></h2>
+            <div class="row">
+            <div class="column">
+                <img src="images/portfolio/portfolio2_media1.PNG" alt="Testing the bluetooth port" style=" transform: rotate(90deg); width:100%" onclick="myFunction(this);">
+                            </div>
+            <div class="column">
+                <img src="images/portfolio/portfolio2_media2.PNG" alt="The finished product with the stand" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="images/portfolio/portfolio2_media3.PNG" alt="Top view of the finished part" style="width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="images/portfolio/portfolio2_media4.PNG" alt="CAD of the fan part" style="width:100%" onclick="myFunction(this);">
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="images/portfolio/portfolio2_media5.PNG" alt="CAD of the fan part" style="width:100%" onclick="myFunction(this);">
+                            </div>
+            <div class="column">
+                <img src="images/portfolio/portfolio2_media6.png" alt="A simple andriod app to send text to display" style="width:100%" onclick="myFunction(this);">
+            </div>
+        </div>
+            <div class="container">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="expandedImg" style ="flex-shrink: 0; min-width: 100%; min-height: 100%">
+                <div id="imgtext"></div>
+            </div>
+
+            <script>
+                function myFunction(imgs) {
+                    var expandImg = document.getElementById("expandedImg");
+                    var imgText = document.getElementById("imgtext");
+                    expandImg.src = imgs.src;
+                    imgText.innerHTML = imgs.alt;
+                    expandImg.parentElement.style.display = "block";
+                }
+            </script>
         </div>
     </div>
 </div>

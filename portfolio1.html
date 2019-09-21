@@ -14,7 +14,8 @@
             <li><a href = "http://www.emmylousatterfield.online/index.html">HOME</a></li>
             <li><a href = "http://www.emmylousatterfield.online/contact.html">CONTACT ME</a></li>
             <li class ='active'><a href = "http://www.emmylousatterfield.online/portfolio.html">PORTFOLIO</a></li>
-            <li ><a href = "http://www.emmylousatterfield.online/blog">BLOG</a></li>
+                        <li><a href = "http://www.emmylousatterfield.online/cookbook.html">COOKBOOK</a></li>
+            <li ><a href = "http://www.emmylousatterfield.online/blog.html">BLOG</a></li>
             <li><a href = "Emily Satterfield's Resume.pdf" target = "_blank">RESUME</a></li>
         </ul>
     </nav>
@@ -36,7 +37,8 @@
         <h4 style = "text-align: center; font-size: 24pt;">Arduino Calculator</h4>
     <h3>Summer 2016</h3>
         <div id ="card">
-            <p style="text-align:center;"> <img src = "C:\Users\esatt\WebstormProjects\emmylousite\doggos.PNG"/> </p>
+            <p style="text-align:center;"> <video style ="height:auto; max-width:300px;" controls>
+    <source  src = 'images/portfolio/calcvideo.mp4'/> </p>
             <h2><b><a NAME="Summary"/>Summary</b></h2>
             <p>As a part of ESP Junction, I built a functional calculator using an Arduino Uno, a keypad, a button, a tupperware container,
                 and an LCD display. The purpose of this project was to investigate how calculators do math and to recreate those functions myself.
@@ -70,10 +72,7 @@
 
             </p>
             <h2><b><a NAME="Code"/>Code</b></h2>
-            <p style="text-align:center;"><img src = "codesnippet.png"/></p>
-            <p>State Machines
-                Calculators are simply state machines, or machines that start in a state and move to new states based on certain events.
-                The state machine I used for my calculator has four states. The first state called “get_first_operand” is the state the calculator
+             <p>The state machine I used for my calculator has four states. The first state called “get_first_operand” is the state the calculator
                 begins in. In this state it looks for the push of a button on the keypad. If the calculator receives a string of numbers, it turns
                 that string into a full number. This state also looks for a negative sign or a decimal point. Once it has received an operator,
                 it knows that it has received the full operand, so it saves that operand and the operator and moves into the next state called get_second_operand.
@@ -84,6 +83,8 @@
                 the state is becomes get_first_operand, and everything resets. The final state, get_equals, is used in the case that the operator is a logarithm
                 because there wouldn’t be a second operand to look for. Whenever a the clear key is pressed, everything is pressed and it moves back to the first
                 state and looks for an operand again.
+            <h4 style= "color:black;">My State Machine</h4>
+             <p style="text-align:center;"><img src = "images/portfolio/statediagram.png" alt = "My state machine"/></p>
             </p>
             <h2><b><a NAME="Lessons"/>Lessons Learned</b></h2>
             <p>This setup was used for simplicity and because the Arduino language is fairly intuitive and easy for beginners to write in. However, there were
@@ -107,9 +108,11 @@
                 persist.</p>
             <p>Furthermore, there are limitations in the functions themselves. For example, when using the “pow()” function to raise a number to a power, the result
                 could come back inaccurate due to rounding issues. So, to fix this more round-a-bout code had to be used:</p>
+             <p style="text-align:center;"><img src = "images/portfolio/codesnippet2.PNG"/></p>
             <p>This code essentially multiplies a number by itself second operand number of times. Or is the second operand is 0, it returns a 1, as a result.
                 And because there is no Arduino function for performing a root (besides square roots), a different method had to be used as well:</p>
             <p>The code used for the first operand state:</p>
+             <p style="text-align:center;"><img src = "images/portfolio/codesnippet3.png"/></p>
             <p>All the characters are used in if statements that translate them into actual functions, the characters cannot do anything on their own, and do not
                 have an innate value to the calculation, without first being parsed.Here, the first operand is raised to the power of the one divided by the second
                 operand. The “pow()” function was used because there was no other way to do accomplish this task with a fractional value. The results here have proven
@@ -126,17 +129,15 @@
             <h2><b><a NAME="Media"/>Media</b></h2>
             <div class="row">
             <div class="column">
-                <img src="C:\Users\esatt\WebstormProjects\emmylousite\doggos.PNG" alt="Nature" style="width:100%" onclick="myFunction(this);">
+                <img src="images/portfolio/portfolio1_media1.PNG" alt="Calculator Picture" style=" transform: rotate(90deg); width:100%" onclick="myFunction(this);">
             </div>
             <div class="column">
-                <img src="C:\Users\esatt\WebstormProjects\emmylousite\doggos.PNG" alt="Snow" style="width:100%" onclick="myFunction(this);">
+                <img src="images/portfolio/calcpic.png" alt="Calculator Picture" style=" transform: rotate(90deg); width:100%" onclick="myFunction(this);">
             </div>
             <div class="column">
-                <img src="C:\Users\esatt\WebstormProjects\emmylousite\doggos.PNG" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+                <img src="images/portfolio/statediagram.png" alt="State Diagram" style="width:100%" onclick="myFunction(this);">
             </div>
-            <div class="column">
-                <img src="C:\Users\esatt\WebstormProjects\emmylousite\doggos.PNG" alt="Lights" style="width:100%" onclick="myFunction(this);">
-            </div>
+            
         </div>
 
             <div class="container">

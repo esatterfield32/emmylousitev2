@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio - My Website</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+</head>
+<body>
+<header>
+    <p style = "color:black">yo</p>
+    <nav>
+        <ul>
+            <li><a href = "http://www.emmylousatterfield.online/index.html">HOME</a></li>
+            <li><a href = "http://www.emmylousatterfield.online/contact.html">CONTACT ME</a></li>
+            <li class ='active'><a href = "http://www.emmylousatterfield.online/portfolio.html">PORTFOLIO</a></li>
+            <li ><a href = "http://www.emmylousatterfield.online/cookbook.html">COOKBOOK</a></li>
+            <li ><a href = "http://www.emmylousatterfield.online/blog.html">BLOG</a></li>
+            <li><a href = "Emily Satterfield's Resume.pdf" target = "_blank">RESUME</a></li>
+        </ul>
+    </nav>
+    <div class = "clear"></div>
+</header>
+<div id="wrapper">
+    <div id="mediabar">
+        <ul style="font-size:20px; list-style: none">
+            <li>GitHub</li>
+            <li><a HREF="#Summary" style = "color:white">Summary</a></li>
+            <li><a HREF="#Goals" style = "color:white">Goals</a></li>
+            <li><a HREF="#Hardware" style = "color:white">Hardware</li>
+            <li><a HREF="#Code" style = "color:white">Code</li>
+            <li><a HREF="#Lessons" style = "color:white">Lessons Learned</li>
+            <li><a HREF="#Media" style = "color:white">Media</li>
+        </ul>
+    </div>
+    <div id= "card-wrapper">
+        <h4 style = "text-align: center; font-size: 24pt;">My Website</h4>
+    <h3>Summer 2016</h3>
+        <div id ="card">
+            <p style="text-align:center;"><img  src = 'images/portfolio/portfolio3_media1.PNG'/></p>
+            <h2><b><a NAME="Summary"/>Summary</b></h2>
+            I made this website as a way to show the world who I am. I originally made it over the summer because I wanted to start a blog, but I started over this fall to make it better. If you saw it before, I HOPE you agree that this website is leaps and bounds above the other one. Since I first published it, I have made many additions, including my recipe book and my porfolio. 
+            <h2><b><a NAME="Goals"/>Goals</b></h2>
+            When making this site, my goal was to have a professional clean home for all the things I want to share with share with the world. While it is highly doubtful that anyone, but me has regularly visited this site, I was a perfectionist when building this site. Everything is done from scratch. Every line of code was written with love. Though I could have used many different platforms such as Bootstrap and Wordpress to make this project easier for myself, I wanted to use this as a learning opportunity. 
+            <h2><b><a NAME="Hardware"/>Hardware</b></h2>
+            I guess the only real hardware used here was my computer. I used Jetbrains WebStorm as my IDE and did most of the coding locally before moving the files over to Hostinger, a hosting platform. 
+            <h2><b><a NAME="Lessons"/>Lessons Learned</b></h2>
+            When I started this project in June, I had never written a single line of html, css, javascript or php code in my life. The learning curve was steep. My original site was heavily based off other example sites I saw as I was learning how to do all this stuff on Youtube. It was really ugly. At least in hindsight, I think so. At the time I thought it looked at great. I don't know what I was thinking. Since then, I have branched out and gotten more ambitious with some of the elements of my site. I learned a bit of javascript and added some more dynamic parts to the site. I also had to learn about backend developing when I built the contact form that forwards information to email. A considerable amount of debugging went into making it secure. Overall, I am very happy with how this project came out. This gave me the opportunity to develop proficiency in front-end development and dabble in back-end stuff. I also got to explore my creative side as I developed how everything looked. Every hour spent on this project was worth it.
+            </p>
+            <h2><b><a NAME="Media"/>Media</b></h2>
+            <div class="row">
+            <div class="column">
+                <img src="images/portfolio/portfolio3_media1.PNG" alt="Calculator Picture" style=" width:100%" onclick="myFunction(this);">
+                            </div>
+            <div class="column">
+                <img src="images/portfolio/portfolio3_media2.PNG" alt="Calculator Picture" style=" width:100%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="images/portfolio/portfolio3_media3.PNG" alt="State Diagram" style="width:100%" onclick="myFunction(this);">
+            </div>
+            
+        </div>
+
+            <div class="container">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="expandedImg" style ="flex-shrink: 0; min-width: 100%; min-height: 100%">
+                <div id="imgtext"></div>
+            </div>
+
+            <script>
+                function myFunction(imgs) {
+                    var expandImg = document.getElementById("expandedImg");
+                    var imgText = document.getElementById("imgtext");
+                    expandImg.src = imgs.src;
+                    imgText.innerHTML = imgs.alt;
+                    expandImg.parentElement.style.display = "block";
+                }
+            </script>
+        </div>
+    </div>
+</div>
+<footer>
+    <p><i>Emily Satterfield 2018</i></p>
+</footer>
+</body>
+</html>

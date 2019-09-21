@@ -1,0 +1,112 @@
+<html lang = en>
+<head>
+    <meta charset= "utf-8" />
+    <title> Full Portfolio</title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+</head>
+<body>
+<header>
+    <p style ="color:black;">yuh</p>
+
+    <nav>
+        <ul style=":40pt; ">
+            <li class ='active'><a href = "#">HOME</a></li>
+            <li><a href = "http://www.emmylousatterfield.online/contact.html">CONTACT ME</a></li>
+            <li><a href = "http://www.emmylousatterfield.online/portfolio.html">PORTFOLIO</a></li>
+            <li><a href = "http://www.emmylousatterfield.online/cookbook.html">COOKBOOK</a></li>
+            <li><a href = "http://www.emmylousatterfield.online/blog.html">BLOG</a></li>
+            <li><a href = "Emily Satterfield's Resume.pdf" target = "_blank">RESUME</a></li>
+        </ul>
+    </nav>
+    <div class = "clear"></div>
+</header>
+<div id="wrapper">
+    <div class="clear"></div>
+    <button class="collapsible"><p style="text-align:center">
+        <h2 style = "color:black;">SmartCaptions</h2>
+        <img src = "images/portfolio/portfolio4_media1.png" style="width:80%; margin:0 10%; height:auto;"/>
+    </button>
+    <div class="content">
+        <h3 style = "color:black; text-align:left;">Summary</h3>
+        <p>SmartCaptions
+This was a team project that I worked on as a part of HackMIT. Have you ever listened in on a conversation and had no clue what was being talked about? Most of us have. So we sought to 
+find a way to give people easy access to resources to educate them on a subject while listening to it. The basic premise behind our project was using text-to-speech translators and natural language processing to pick out the
+the most important words from the speech. A transcript would be developed with those words highlighted. If you clicked on one of those keywords a list of resources would appear to give you insight on the topic.</p>
+    </div>
+    <div class ="clear"></div>
+    <button class="collapsible"><p style="text-align:center">
+        <h2 style = "color:black;">Arduino Calculator</h2>
+        <img src = "images/portfolio/calcpic2.png" style="width:80%; margin:0 10%; height:auto;"/>
+    </button>
+    <div class="content">
+        <h3 style = "color:black; text-align:left;">Summary</h3>
+    <p>As a part of ESP Junction, I built a functional calculator using an Arduino Uno, a keypad, a button, a tupperware container,
+                and an LCD display. The purpose of this project was to investigate how calculators do math and to recreate those functions myself.
+                My calculator can calculator can do the basic four functions as well as calculate trigonometric functions, exponents, logarithms, and roots. <a href = "http://www.emmylousatterfield.online/portfolio1.html">click here for more...</a></p>
+    </div>
+    <div class ="clear"></div>
+    <button class="collapsible"><p style="text-align:center">
+        <h2 style = "color:black;">Persistence of Vision LED Display</h2>
+        <img src = "images/portfolio/portfolio2_media1.PNG" style="width:80%; margin:0 10%; height:auto;"/>
+    </button>
+    <div class="content">
+        <h3 style = "color:black; text-align:left;">Summary</h3>
+    <p>If you watched the video above, how many LEDs do think were used to create the display. The answer is not intuitive.
+            In fact, when I first saw a similar project on Youtube, I was way off. The answer: eight. How is this possible?
+            Persistence of vision. In other words, the brain can only process visual information so fast. So if you flash the LEDs
+            faster than that, you won't even be able to recognize that they're flashing. To take advantage of this, you can move them
+            while they're flashing and make cool designs. Or spell words. Your brain won't tell the difference between the moving LEDs and 
+            60 stationary ones. I thought this was really cool, and was inspired to build this project. <a href = "http://www.emmylousatterfield.online/portfolio2.html">click here for more...</a></p>
+    </div>
+    <div class ="clear"></div>
+    <button class="collapsible"><p style="text-align:center">
+        <h2 style = "color:black;">My Website</h2>
+        <img src = "images/portfolio/portfolio3_media3.PNG" style="width:80%; margin:0 10%; height:auto;"/>
+    </button>
+    <div class="content">
+        <h3 style = "color:black; text-align:left;">Summary</h3>
+    <p>I made this website as a way to show the world who I am. I originally made it over the summer because I wanted to start a blog, 
+but I started over this fall to make it better. If you saw it before, I HOPE you agree that this website is leaps and bounds above the other one. 
+Since I first published it, I have made many additions, including my recipe book and my porfolio.<a href = "http://www.emmylousatterfield.online/portfolio3.html">click here for more...</a></p>
+    </div>
+    <div class ="clear"></div>
+    <button class="collapsible"><p style="text-align:center">
+        <h2 style = "color:black;">FRC Team 5962 - perSEVERE</h2>
+        <img src = "images/portfolio/portfolio5_media1.PNG" style="width:80%; margin:0 10%; height:auto;"/>
+    </button>
+    <div class="content">
+        <h3 style = "color:black; text-align:left;">Summary</h3>
+    <p> I was a member of FRC team 5962 for 3 years in high school. During my time on the team, I served as the electrical lead for two years and the captain of the team for my final year. Being
+in a leadership position for so long gave me a unique opportunity to participate in many roles on the team. I led administrative tasks, organized, founded, and ran several community outreach
+events and was in charge of the majority of technical aspects of the team's robots. I was also one of the chief designers and CAD modelers on the team. <a href = "http://www.emmylousatterfield.online/portfolio4.html">click here for more...</a></p>
+    </div>
+    <div class ="clear"></div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+
+
+
+                } else {
+                    content.style.display = "block";
+
+
+                }
+            });
+        }
+    </script>
+</div>
+<footer><p><i>Emily Satterfield 2018</i></p></footer>
+</body>
+
+</html>
